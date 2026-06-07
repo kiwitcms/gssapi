@@ -8,6 +8,7 @@
 build-pkg:
 	rm -rf dist/
 	docker build --output type=local,dest=dist/ --target pkg-dist .
+	ls -l dist/
 
 .PHONY: upload-pkg
 upload-pkg: build-pkg
