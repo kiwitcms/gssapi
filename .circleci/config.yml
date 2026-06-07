@@ -22,7 +22,6 @@ jobs:
             # fail if not using Python 3
             python3 --version | grep "3\."
 
-            sudo apt-get install make
             make build-pkg
 
   aarch64-build-and-push:
