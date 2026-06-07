@@ -39,6 +39,7 @@ jobs:
             # fail if not using Python 3
             python3 --version | grep "3\."
 
+            pip install twine
             make upload-pkg
 
 

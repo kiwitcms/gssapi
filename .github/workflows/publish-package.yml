@@ -26,4 +26,5 @@ jobs:
           TWINE_USERNAME: ${{ secrets.GEMFURY_USERNAME }}
           TWINE_PASSWORD: ${{ secrets.GEMFURY_PUSH_TOKEN }}
         run: |
+            pip install twine
             make upload-pkg
