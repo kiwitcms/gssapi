@@ -23,6 +23,7 @@ jobs:
 
       - name: Upload packages for ${{ github.event.ref }}
         env:
+          TWINE_USERNAME: ${{ secrets.GEMFURY_USERNAME }}
           TWINE_PASSWORD: ${{ secrets.GEMFURY_PUSH_TOKEN }}
         run: |
             make upload-pkg
