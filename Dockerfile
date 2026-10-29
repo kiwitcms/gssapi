@@ -5,10 +5,10 @@
 
 FROM registry.access.redhat.com/ubi10-minimal AS buildroot
 
-RUN microdnf -y install gcc krb5-devel python3.12-devel
+RUN microdnf -y install gcc krb5-devel python3.14-devel
 ENV PATH=/venv/bin:${PATH} \
     VIRTUAL_ENV=/venv
-RUN python3.12 -m venv /venv
+RUN python3.14 -m venv /venv
 
 COPY ./requirements.txt /Kiwi/requirements.txt
 RUN pip3 install --no-cache-dir --upgrade pip twine wheel
